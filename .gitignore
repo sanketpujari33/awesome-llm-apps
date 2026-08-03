@@ -4,8 +4,6 @@ __pycache__/
 *.pyo
 
 # Environment files
-.env
-.env.local
 
 # Virtual environments
 venv/
@@ -16,3 +14,4 @@ node_modules/
 .next/
 dist/
 *.tsbuildinfo
+config.bat
