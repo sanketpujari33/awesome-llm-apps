@@ -13,10 +13,10 @@
   "type": "module",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc && npm run build:app",
-    "build:app": "cd apps && rm -rf dist && BUILD_APP=flights-app vite build && BUILD_APP=hotels-app vite build && BUILD_APP=trading-app vite build && BUILD_APP=kanban-app vite build",
-    "start": "node dist/server.js",
-    "dev": "tsx watch server.ts"
+    "build": "node init && tsc && npm run build:app",
+    "build:app": "node init && cd apps && rm -rf dist && BUILD_APP=flights-app vite build && BUILD_APP=hotels-app vite build && BUILD_APP=trading-app vite build && BUILD_APP=kanban-app vite build",
+    "start": "node init && node dist/server.js",
+    "dev": "node init && tsx watch server.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.2",

@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "dev:mcp": "cd ../threejs-server && pnpm run dev",
+    "dev": "node init && next dev --turbopack",
+    "dev:mcp": "node init && cd ../threejs-server && pnpm run dev",
     "pack-download-kit": "node ./scripts/pack-download-kit.mjs",
     "prebuild": "node ./scripts/pack-download-kit.mjs",
-    "build": "next build",
-    "start": "next start",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "eslint .",
     "test:download-kit": "node ./test/test-download-full-kit.mjs",
     "test:e2b-download": "node ./test/test-e2b-download.mjs"
