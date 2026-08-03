@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run dev:ui\" \"npm run dev:agent\" --names ui,agent --prefix-colors blue,green --kill-others",
-    "dev:debug": "LOG_LEVEL=debug npm run dev",
-    "dev:agent": "./scripts/run-agent.sh || scripts/run-agent.bat",
-    "dev:ui": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && concurrently \"npm run dev:ui\" \"npm run dev:agent\" --names ui,agent --prefix-colors blue,green --kill-others",
+    "dev:debug": "node init && LOG_LEVEL=debug npm run dev",
+    "dev:agent": "node init && ./scripts/run-agent.sh || scripts/run-agent.bat",
+    "dev:ui": "node init && next dev --turbopack",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "install:agent": "./scripts/setup-agent.sh || scripts\\setup-agent.bat",
     "postinstall": "npm run install:agent"

@@ -21,9 +21,9 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "mcp-use build --inline",
-    "dev": "mcp-use build --inline && cross-env NODE_ENV=production npx tsx index.ts",
-    "start": "mcp-use start",
+    "build": "node init && mcp-use build --inline",
+    "dev": "node init && mcp-use build --inline && cross-env NODE_ENV=production npx tsx index.ts",
+    "start": "node init && mcp-use start",
     "deploy": "mcp-use deploy",
     "postinstall": "mcp-use generate-types || node -e \"process.exit(0)\""
   },

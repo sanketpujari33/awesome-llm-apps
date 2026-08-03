@@ -5,8 +5,8 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
+    "dev": "node init && turbo run dev",
+    "build": "node init && turbo run build",
     "lint": "turbo run lint",
     "clean": "rm -rf node_modules apps/*/node_modules apps/*/.turbo .turbo",
     "fresh": "pnpm clean && pnpm i"
